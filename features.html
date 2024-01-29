@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Features Page</title>
+    <meta name="description" content="Welcome to Sweet Life, the best ice cream shop where you can conveniently register and place orders for delicious ice cream online. Explore our wide range of flavors and enjoy the sweetest moments.">
+    <meta name="keywords" content="Sweet Life, ice cream shop, online orders, registration, ice cream flavors">
+    <meta name="author" content="Ms Bianco">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation Menu -->
+        <nav id="navbar">
+            <div class="logo" id="Page-Logo">
+                <img src="Images/Logo.jpeg" alt="Error in loading the Sweet Life logo Image!">
+            </div>
+            <!-- Navbar Links -->
+            <ul class="navbar_links">
+                <li id="menu-home"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/index.html">Home</a></li>
+                <li id="menu-register"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/register.html">Register</a></li>
+                <li id="menu-order"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/order.html">Order</a></li>
+                <li id="menu-features"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/features.html">Features</a></li>
+            </ul>
+            <button id="contact-button" class="contact">Contact Us</button>
+            <!-- Burger Menu for Mobile -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Heading -->
+    <h1 id="heading-features">Implemented Features</h1>
+
+    <!-- Features List -->
+    <div class="menu-features">
+        <ul id="features">
+            <li>
+                <h3>Highlighting the menu item in the navigator</h3>
+                <p>
+                    Highlighting the menu item in the navigator corresponding to the current webpage. (Implemented in the JavaScript code of the navigation menu.)
+                </p>
+                <img src="Images/Feature1.jpeg" alt="Feature 1 Image Error!">
+            </li>
+            <li>
+                <h3>Automatic Billing Address</h3>
+                <p>
+                    In page "order.html", a checkbox with the label "Billing address is same as the delivery address" is added somewhere near the field of billing address. When this checkbox is checked, the fields for the billing address will be filled with the delivery address automatically and billing address will disappear. If the delivery address is not completed when this checkbox is checked, display an alert: "Please enter your delivery address first". (Implemented using JavaScript in the "order.html" page.)       
+                </p>
+                <img src="Images/Feature2.jpeg" alt="Feature 2 Image Error!">
+            </li>
+            <li>
+                <h3>Multiple Credit Card Options</h3>
+                <p>
+                    Allow users to choose from three types of credit cards: Visa, MasterCard and American Express. Based on the type of credit card, limiting the length of the credit card number to 16 digits for Visa and MasterCard and 15 digits for American Express. (Implemented using JavaScript in the "order.html" page.)
+                </p>
+                <img src="Images/Feature3.jpeg" alt="Feature 3 Image Error!">
+            </li>
+        </ul>
+    </div>
+
+    <!-- Paragraph about viewing features in action -->
+    <p id="para-features">To see these features in action, visit the following pages: </p>
+
+    <!-- Menu with links to other pages -->
+    <ul class="menu-features">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="features.html">Features</a> (You're currently on this page)</li>
+    </ul>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Sweet Life. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

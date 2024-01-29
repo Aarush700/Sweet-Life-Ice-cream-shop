@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Registration Form</title>
+    <meta name="description" content="Register at Sweet Life to unlock exclusive benefits and enjoy a seamless ice cream ordering experience. Join our community and gain access to special offers, personalized recommendations, and priority delivery. Sign up now and start your journey to savoring the finest ice cream creations.">
+    <meta name="keywords" content="Sweet Life, ice cream shop, online orders, registration, ice cream flavors">
+    <meta name="author" content="Ms Bianco">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation Menu -->
+        <nav id="navbar">
+            <div class="logo" id="Page-Logo">
+                <img src="Images/Logo.jpeg" alt="Error in loading the Sweet Life logo Image!">
+            </div>
+            <!-- Navbar Links -->
+            <ul class="navbar_links">
+                <li id="menu-home"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/index.html">Home</a></li>
+                <li id="menu-register"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/register.html">Register</a></li>
+                <li id="menu-order"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/order.html">Order</a></li>
+                <li id="menu-features"><a href="https://mercury.swin.edu.au/cos10005/s103798065/wd_assignment_2/features.html">Features</a></li>
+            </ul>
+            <button id="contact-button" class="contact">Contact Us</button>
+            <!-- Burger Menu for Mobile -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Registration Section -->
+        <section id="registration">
+            <h1>Registration Form</h1>
+            <div id="registration-box">
+                <!-- Registration Form -->
+                <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" class="form1" id="reg-form">
+                    <!-- Username Field -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <br>
+
+                     <!-- Password Field -->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <br>
+
+                    <!-- Gender Field -->
+                    <label for="gender">Gender:</label> <br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <br>
+
+                    <!-- Email Field -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <br>
+
+                    <!-- Favorite Ice Cream Field -->
+                    <label for="ice-cream">Favorite Ice Cream:</label>
+                    <select name="ice-cream" id="ice-cream">
+                        <option value="">Select an ice cream flavor</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="butterscotch">Butterscotch</option>
+                        <option value="strawberry">Fresh Strawberry</option>
+                        <option value="fudge">Rocky Mountain Fudge</option>
+                        <option value="serve">Soft Serve</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+
+                    <!-- Terms and Conditions Checkbox -->
+                    <label for="terms">Agree to Terms and Conditions:</label>
+                    <input type="checkbox" id="terms" name="terms">
+                    <br>
+
+                    <!-- Submit Button -->
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Sweet Life. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

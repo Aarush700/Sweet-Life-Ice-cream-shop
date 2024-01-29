@@ -1,0 +1,1040 @@
+/* ============================= CSS File for both Mobile and Desktop ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+/* ============================= Desktop Styles ============================= */
+
+/* Css Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    background-color: black;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation bar - Logo and Image */
+.logo {
+    cursor: pointer;
+    margin: 3px 10px;
+}
+
+.logo img {
+    width: 90px;
+    height: 55px;
+    margin: 3px 6px;
+}
+
+/* Navigation bar: List Styling */
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease 0s;
+}
+
+#navbar ul li a:hover {
+    color: red;
+    background-color: white;
+}
+
+button.contact {
+    padding: 9px 20px;
+    margin: 0px 5px;
+    background-color: linen;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1.3rem;
+    color: blue;
+}
+
+button.contact:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Highlighting the menu feature */
+.navbar_links li.active {
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 820px) {
+    #navbar {
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar_links {
+        position: absolute;
+        right: 0px;
+        height: 40vh;
+        top: 6.5vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        visibility: hidden;
+    }
+
+    .navbar_links li {
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar_links a {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav_active {
+    transform: translateX(0%);
+    visibility: visible;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Styling the home section. */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    padding: 17px 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: "";
+    background: url('../Images/bg3.jpg') no-repeat center center/cover;
+    top: 70px;
+    left: 0px;
+    position: absolute;
+    height: 550px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 35px;
+}
+
+#home p {
+    color: purple;
+    text-align: justify;
+    font-size: 24px;
+    width: 80%;
+    font-family: 'Gentium Book Basic', serif;
+    margin-bottom: 50px;
+}
+
+/* Styling the history section */
+#history {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#history h1 {
+    color: #fc5c44;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#history p {
+    color: #666666;
+    font-size: 24px;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+/* Styling the menu section */
+#menu {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+#menu h1 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#menu h2 {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#menu h2:hover {
+    transform: scale(1.1);
+    color: darkblue;
+}
+
+#menu p {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+#menu li::before {
+    content: "- ";
+}
+
+#menu a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 2px;
+}
+
+#menu a:hover {
+    color: #333;
+    border-color: #333;
+}
+
+/* Styling the types of icecream section */
+#types {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+#types h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.icecream {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.icecream h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.icecream img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icecream p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+/* Styling the Location section */
+#location {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+address {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+/* Styling the footer */
+footer {
+    margin-top: 50px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Styling the contact us page */
+#contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+#contact .h-primary {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Styling the registration form. */
+#registration h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+#registration {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#registration-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form1 form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form1 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.form1 input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form1 input[type="radio"]+label {
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.form1 input[type="checkbox"] {
+    margin: 10px;
+}
+
+.form1 input[type="submit"] {
+    margin-top: 20px;
+    color: white;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+.form1 input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.success {
+    color: green;
+    font-size: 12px;
+}
+
+/* Styling the order form. */
+#order h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+#order {
+    max-width: 700px;
+    margin: 0px auto;
+    background-color: #fff;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#order-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form2 label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form2 input,
+select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form2 input[type="submit"] {
+    width: auto;
+    margin-top: 20px;
+    color: white;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+.form2 input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form2 input[type="checkbox"] {
+    width: auto;
+    margin: 10px;
+}
+
+.form2 #check-address {
+    display: none;
+}
+
+.address-section {
+    margin-bottom: 10px;
+}
+
+.address-section input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#delivery-address,
+#billing-address {
+    margin-bottom: 20px;
+}
+
+#delivery-address h2,
+#billing-address h2 {
+    margin-bottom: 10px;
+}
+
+#delivery-address,
+#billing-address {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+}
+
+#credit-card-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+}
+
+#delivery-pickup {
+    margin-bottom: 20px;
+}
+
+#pay-on-pickup,
+#pay-online {
+    width: auto;
+}
+
+#delivery-pickup:focus+#delivery-address {
+    display: block;
+}
+
+#pay-online:checked~#credit-card-info {
+    display: block;
+}
+
+/* Styling the features page */
+#heading-features {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+#heading-features:hover {
+    transform: scale(1.1);
+    color: purple;
+}
+
+#features li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#features li img {
+    width: 80%;
+    border: 2px solid green;
+    border-radius: 10px;
+    aspect-ratio: 7/2;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.menu-features h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.menu-features p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.menu-features {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#para-features {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+#para-features:hover {
+    transform: scale(1.1);
+    color: purple;
+}
+
+.menu-features ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-features a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-features a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+/* ============================= Mobile styles ============================= */
+
+@media (max-width: 767px) {
+
+    /* Navbar */
+    #navbar {
+        height: var(--navbar-height);
+        background-color: black;
+    }
+
+    /* Logo and Image */
+    .logo {
+        margin: 3px 5px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 45px;
+        margin: 3px;
+    }
+
+    /* Navigation bar: List Styling */
+    #navbar ul li {
+        font-size: 1.1rem;
+    }
+
+    #navbar ul li a {
+        padding: 3px 15px;
+        border-radius: 15px;
+    }
+
+    button.contact {
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+
+    /* Home section */
+    #home {
+        padding: 17px 30px;
+        margin-bottom: 0;
+    }
+
+    #home h1 {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+    #home p {
+        font-size: 13px;
+        width: 80%;
+        margin-bottom: auto;
+    }
+
+    #home::before {
+        content: "";
+        background: url(../Images/bg3.jpg) no-repeat center center/cover;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        height: 380px;
+        width: 100%;
+        z-index: -1;
+    }
+
+    /* History section */
+    #history {
+        margin-top: -220px;
+        padding: 30px;
+    }
+
+    #history h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    #history p {
+        font-size: 15px;
+        line-height: 1.4;
+        max-width: 100%;
+    }
+
+    /* Menu section */
+    #menu {
+        padding: 30px;
+    }
+
+    #menu h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #menu p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    #menu li {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    /* Types of ice cream section */
+    #types {
+        padding: 30px;
+    }
+
+    #types h1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .icecream {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .icecream h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .icecream img {
+        margin-bottom: 5px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        vertical-align: middle;
+    }
+
+    .icecream p {
+        font-size: 14px;
+    }
+
+    /* Location section */
+    #location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    address {
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    /* Styling the contact us page for mobile */
+    #contact-box {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .form-group input,
+    textarea {
+        padding: 8px;
+    }
+
+    .form-group button {
+        padding: 8px 16px;
+    }
+
+    #contact .h-primary {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    /* Styling the registration form for mobile */
+    #registration h1 {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    #registration {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #registration-box {
+        max-width: 100%;
+    }
+
+    .form1 form {
+        max-width: 100%;
+    }
+
+    .form1 input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .form1 input[type="submit"] {
+        margin-top: 15px;
+        padding: 8px 16px;
+    }
+
+    /* Styling the order form for mobile */
+    #order h1 {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    #order {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #order-box {
+        max-width: 100%;
+    }
+
+    .form2 input,
+    select {
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .form2 input[type="submit"] {
+        margin-top: 15px;
+        padding: 8px 16px;
+    }
+
+    .address-section input[type="text"] {
+        padding: 8px;
+    }
+
+    #delivery-address,
+    #billing-address,
+    #credit-card-info {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Styling the features page for mobile */
+    #heading-features {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    #features li {
+        font-size: 12px;
+    }
+
+    #features li img {
+        width: 80%;
+    }
+
+    .menu-features {
+        max-width: 80%;
+        padding: 10px;
+    }
+
+    .menu-features h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .menu-features p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .menu-features ul {
+        margin-left: 15px;
+    }
+}
+
+/* ============================= Custom Alert Styles ============================= */
+#errWin {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25em;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: left;
+    z-index: 10000;
+}
+
+#errWin ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#errWin li {
+    margin-bottom: 10px;
+}
+
+#errWin a.button {
+    border: 1px solid black;
+	border-radius: 5px;
+	background-color: lightgrey;
+	background: linear-gradient(#ccc, lightgrey);
+	padding: 0.25em;
+	text-decoration: none;
+    float: right;
+}
+
+#errWin a.button:hover {
+    background-color: darkgrey;
+	background: linear-gradient(#ccc, darkgrey);
+	text-decoration: underline;
+}
